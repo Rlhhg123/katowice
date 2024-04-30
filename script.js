@@ -18,6 +18,7 @@ const converter = new showdown.Converter({
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   minZoom: 11,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
 const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).setZIndexOffset(9999999).addTo(map);
