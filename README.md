@@ -1,5 +1,5 @@
 <p>
-<a href="https://konradowypl.github.io/katowice"><img src = "./logo.png" align="left" width="90"></a>
+<a href="https://konradowypl.github.io/katowice"><img src = "./logo.png" align="left" width="100"></a>
 <h1>Ciekawe Katowice</h1>
 <h3>Zanurz się w historii</h3>
 </p>
