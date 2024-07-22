@@ -1,10 +1,29 @@
-![](data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPHBhdGgNCiAgICAgICAgZD0iTTkgMjBMMyAxN1Y0TDUgNU05IDIwTDE1IDE3TTkgMjBWMTRNMTUgMTdMMjEgMjBWN0wxOSA2TTE1IDE3VjE0TTE1IDYuMkMxNSA3Ljk2NzMxIDEzLjUgOS40IDEyIDExQzEwLjUgOS40IDkgNy45NjczMSA5IDYuMkM5IDQuNDMyNjkgMTAuMzQzMSAzIDEyIDNDMTMuNjU2OSAzIDE1IDQuNDMyNjkgMTUgNi4yWiINCiAgICAgICAgc3Ryb2tlPSIjMWQ3NDBiIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz4NCiAgICA8cGF0aA0KICAgICAgICBkPSJNMTIgNkgxMi4wMU0xNSA2LjJDMTUgNy45NjczMSAxMy41IDkuNCAxMiAxMUMxMC41IDkuNCA5IDcuOTY3MzEgOSA2LjJDOSA0LjQzMjY5IDEwLjM0MzEgMyAxMiAzQzEzLjY1NjkgMyAxNSA0LjQzMjY5IDE1IDYuMloiDQogICAgICAgIHN0cm9rZT0iI2JjMjcyNyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+DQo8L3N2Zz4=)
+<p>
+<a href="https://konradowypl.github.io/katowice"><img src = "./logo.png" align="left" width="90"></a>
+<h1>Ciekawe Katowice</h1>
+<h3>Zanurz się w historii</h3>
+</p>
+<p>
 
-# Ciekawe Katowice 
-### Zanurz się w historii
+<p>
+<img src="https://github.com/user-attachments/assets/4215b7dd-62fd-4c8c-a970-a8f9d9e09cee" align="right" width="120">
+<img src="https://github.com/user-attachments/assets/a803956c-3682-46fc-aa74-69b8d5c78a70" align="right" width="120">
 
-[Live demo](https://konradowypl.github.io/katowice)
+## Zobacz [tutaj](https://konradowypl.github.io/katowice)!
 
-Katowice w jednym miejscu: mapa turystyczna, historia, kultura, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń. 
+Katowice w jednym miejscu: mapa turystyczna, historia, kultura, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń.
+</p>
 
-Idk kiedyś będzie jakiś prawdziwy opis
+## Zdobywaj odznaki za odwiedzanie miejsc!
+<p>
+<img src="./ATRAKCJE.svg" width=50px alt="Odznaka za odwiedzenie wszystkich atrakcji turystycznych w Katowicach">
+<img src="./KOSCIOLY.svg" width=50px alt="Odznaka za odwiedzenie wszystkich kościołów w Katowicach">
+<img src="./MUZEA.svg" width=50px alt="Odznaka za odwiedzenie wszystkich muzeów w Katowicach">
+<img src="./POMNIKI.svg" width=50px alt="Odznaka za odwiedzenie wszystkich pomników w Katowicach">
+</p>
+
+## Udostępnij!
+<img src="./qr-code.png" width=120>
+
+## Pomóż w projekcie!
+Projekt ten jest na otwartej licensji [GNU GPL-3](./LICENSE). Jeśli chcesz coś zmienić to [zgłoś błąd](https://github.com/konradowypl/issues/new) lub otwóż PR  
