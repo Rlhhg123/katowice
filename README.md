@@ -9,7 +9,7 @@
 <img src="https://github.com/user-attachments/assets/4215b7dd-62fd-4c8c-a970-a8f9d9e09cee" align="right" width="120">
 <img src="https://github.com/user-attachments/assets/a803956c-3682-46fc-aa74-69b8d5c78a70" align="right" width="120">
 
-## Zobacz [tutaj](https://konradowypl.github.io/katowice)!
+## Zobacz [online](https://konradowypl.github.io/katowice) bez pobieraia aplikacji!
 
 Katowice w jednym miejscu: mapa turystyczna, historia, kultura, zabytki i wiele innych. Znajdź ciekawostki, planuj trasy i odkrywaj nieznane zakątki miasta. Idealne dla miłośników historii i turystów poszukujących nowych wrażeń.
 </p>
@@ -26,4 +26,4 @@ Katowice w jednym miejscu: mapa turystyczna, historia, kultura, zabytki i wiele 
 <img src="./qr-code.png" width=120>
 
 ## Pomóż w projekcie!
-Projekt ten jest na otwartej licensji [GNU GPL-3](./LICENSE). Jeśli chcesz coś zmienić to [zgłoś błąd](https://github.com/konradowypl/issues/new) lub otwóż PR  
+Projekt ten jest na otwartej licensji [GNU GPL-3](./LICENSE). Jeśli chcesz coś zmienić to [zgłoś błąd](https://github.com/konradowypl/katowice/issues/new) lub otwóż PR  
