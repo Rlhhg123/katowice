@@ -39,11 +39,11 @@ const localisationError = () => {
 const updateUserPos = (position) => {
   locationBox.style.display = "none";
   UserPosition = position;
-  // var newLatLng = new L.LatLng(
-  //   UserPosition?.coords?.latitude,
-  //   UserPosition?.coords?.longitude
-  // );
-  // userPosMarker.setLatLng(newLatLng);
+  var newLatLng = new L.LatLng(
+    UserPosition?.coords?.latitude,
+    UserPosition?.coords?.longitude
+  );
+  userPosMarker.setLatLng(newLatLng);
   userPosMarker.setOpacity(1);
   userPosMarker.options.interactive = true;
   checkLocked();
