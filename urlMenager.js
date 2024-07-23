@@ -15,16 +15,18 @@ const u = (url) => {
       backButton.href = "#mainmenu";
 
       mainmenu.classList.add("hidden");
-      url = trimPrefix(url, "#map:");
-      place = places[url];
-      if (place) {
-        map.setView(new L.LatLng(place.lat, place.lon), 19);
-        displayPlace(url);
+      if (url.startsWith("#map:")) {
+        url = trimPrefix(url, "#map:");
+        place = places[url];
+        if (place) {
+          map.setView(new L.LatLng(place.lat, place.lon), 19);
+          displayPlace(url);
+        } else {
+          tooltips.style.height = "0%";
+        }
       } else {
         tooltips.style.height = "0%";
       }
-    } else {
-      tooltips.style.height = "0%";
     }
   }
 };

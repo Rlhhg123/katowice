@@ -154,19 +154,21 @@ document.ontouchmove = (e) => {
 
 var currentPlace = "";
 
-function displayPlace(key) {
+async function displayPlace(key) {
   currentPlace = key;
   placeData.scrollTop = 0;
-  if (places[key]?.locked) {
-    places[key].marker.openPopup();
-    window.location.hash = "#map";
-  } else {
-    places[key].marker.closePopup();
-    placeInfo.innerHTML = converter.makeHtml(places[key].discreption);
-    document.title = `${places[key].name} - Ciekawe Katowice`;
+  // if (places[key]?.locked) {
+  //   places[key].marker.openPopup();
+  //   window.location.hash = "#map";
+  // } else {
+    const res = await fetch(`./PLACES/${key}.json`)
+    const place = await res.json()
+    // places[key].marker.closePopup();
+    placeInfo.innerHTML = converter.makeHtml(place.discreption);
+    document.title = `${""} - Ciekawe Katowice`;
     tooltips.style.height = "90%";
     tooltips.style.transition = "300ms";
-  }
+  // }
 }
 
 menucontainer.onscroll = (e) => {
