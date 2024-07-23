@@ -1,8 +1,10 @@
 import { markers, userPosIcon } from "./markers.js";
-import { u } from "./urlMenager.js";
+import { u, urlMenager_get } from "./urlMenager.js";
 import { loadRoutes } from "./routes.js";
 
 const places = await fetch("./PLACES/data.json").then((res) => res.json());
+
+urlMenager_get(places, displayPlace);
 
 const map = L.map("map", {
   tap: false,
@@ -11,16 +13,6 @@ const map = L.map("map", {
 }).setView([50.2661678296663, 19.02556763415931], 14);
 
 var UserPosition;
-
-const converter = new showdown.Converter({
-  smartIndentationFix: true,
-  emoji: true,
-  noHeaderId: true,
-  parseImgDimensions: true,
-  strikethrough: true,
-  tables: true,
-  underline: true,
-});
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -56,7 +48,7 @@ const updateUserPos = (position) => {
   checkLocked();
   updateNonVisited();
   updateVisited();
-  loadRoutes(places);
+  loadRoutes(places, userPosMarker.getLatLng());
 };
 
 var localisationUpdateInterval = navigator.geolocation.watchPosition(
@@ -66,7 +58,6 @@ var localisationUpdateInterval = navigator.geolocation.watchPosition(
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
-  u(window.location.hash);
   updateUserPos(position);
 }, localisationError);
 
@@ -104,6 +95,7 @@ document.ontouchend = (e) => f(e.changedTouches[0].clientY);
 const f = (h) => {
   if (swiping) {
     const height = 1 - h / document.documentElement.scrollHeight - swipingFix;
+    console.log(height);
     if (height > 0.1) {
       tooltips.style.transition = "300ms";
 
@@ -155,39 +147,42 @@ document.ontouchmove = (e) => {
 };
 
 places.forEach((place) => {
-  const markerPopup = L.popup().setContent(
-    `Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o ${
-      place?.nn || "nim"
-    } ciekawostki!`
-  );
-  const marker = L.marker([place.lat, place.lon], { icon: markers["red"] })
-    .bindPopup(markerPopup)
-    .addTo(map);
-  // places[key].marker = marker;
-  // places[key].popup = markerPopup;
+  const marker = L.marker([place.lat, place.lon], {
+    icon: markers["red"],
+  }).addTo(map);
+  place.marker = marker;
   marker.on("click", function () {
     window.location.hash = `#map:${place.id}`;
-    displayPlace(place.id);
   });
 });
 
 var currentPlace = "";
+var currentPlaceDat = "";
 
 async function displayPlace(key) {
-  currentPlace = key;
   placeData.scrollTop = 0;
-  // if (places[key]?.locked) {
-  //   places[key].marker.openPopup();
-  //   window.location.hash = "#map";
-  // } else {
+  const placeDat = places.find((place) => place.id == key);
+  currentPlace = key;
+  currentPlaceDat = placeDat;
+
   const res = await fetch(`./PLACES/${key}.json`);
   const place = await res.json();
-  // places[key].marker.closePopup();
-  placeInfo.innerHTML = converter.makeHtml(place.discreption);
-  document.title = `${""} - Ciekawe Katowice`;
+
+  placeName.innerHTML = placeDat.name;
+  placeImages.innerHTML = "";
+  placeImages.append(
+    ...place.img.map((src) => {
+      const img = document.createElement("img");
+      img.setAttribute("src", src);
+      return img;
+    })
+  );
+  placeShort.innerHTML = place.short;
+  placeInfo.innerHTML = place.discreption;
+
+  document.title = `${placeDat.name} - Ciekawe Katowice`;
   tooltips.style.height = "90%";
   tooltips.style.transition = "300ms";
-  // }
 }
 
 menucontainer.onscroll = (e) => {
@@ -239,7 +234,7 @@ function updateNonVisited() {
   nonVisited.innerHTML = ele;
 }
 loadLocked();
-loadRoutes(places);
+loadRoutes(places, userPosMarker.getLatLng());
 updateVisited();
 
 function checkLocked() {
@@ -269,9 +264,11 @@ function loadLocked() {
     }
   });
 }
-
-u(window.location.hash);
-
+{
+  u(window.location.hash);
+  if (currentPlace)
+    map.setView(new L.LatLng(currentPlaceDat.lat, currentPlaceDat.lon), 19);
+}
 const unlockAll = function () {
   let unlocked = Object.keys(places);
   localStorage.setItem("unlocked", JSON.stringify(unlocked));
@@ -289,7 +286,7 @@ dev.onclick = (e) => {
     checkLocked();
     updateNonVisited();
     updateVisited();
-    loadRoutes(places);
+    loadRoutes(places, userPosMarker.getLatLng());
   }
 
   setTimeout(() => counter--, 5000);
@@ -297,12 +294,13 @@ dev.onclick = (e) => {
 
 const share = async () => {
   const shareData = {
-    title: places[currentPlace].name,
+    title: currentPlaceDat.name,
     text: `Odwiedź ${
-      places[currentPlace]?.name2 || places[currentPlace].name
+      currentPlaceDat?.name2 || currentPlaceDat.name
     } i inne ciekawe miejsca w katowicach!`,
     url: window.location.href.replace(/[\?#].*$/, "") + "#map:" + currentPlace,
   };
+  console.log(shareData);
   try {
     await navigator.share(shareData);
   } catch (err) {
@@ -322,6 +320,8 @@ const shareApp = async () => {
     console.error(`Error: ${err}`);
   }
 };
+window.share = share;
+window.shareApp = shareApp;
 
 new ResizeObserver((entries) =>
   entries.forEach((entry) => map.invalidateSize())

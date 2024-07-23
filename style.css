@@ -24,7 +24,7 @@ body {
   flex-grow: 1;
 }
 
-.leaflet-control-container>.leaflet-top.leaflet-left {
+.leaflet-control-container > .leaflet-top.leaflet-left {
   right: 10px;
   left: unset;
 }
@@ -130,7 +130,12 @@ a {
   width: 100%;
   height: 120px;
   filter: grayscale(100%) blur(1px);
-  background-image: linear-gradient(to top, rgb(var(--bgcolor1)) 10%, transparent 55%), url("./assets/mapBg.png");
+  background-image: linear-gradient(
+      to top,
+      rgb(var(--bgcolor1)) 10%,
+      transparent 55%
+    ),
+    url("./assets/mapBg.png");
 }
 
 .appTitle {
@@ -166,10 +171,11 @@ a {
   background-color: rgba(var(--bgcolor1), calc(var(--scale)));
   font-size: calc(var(--scale) * -1em + 2em);
   padding: calc(var(--scale) * -15px + 20px);
-  border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid calc(var(--scale) * 2px);
+  border-bottom: rgba(var(--bgcolor2), calc(var(--scale))) solid
+    calc(var(--scale) * 2px);
 }
 
-.appTitle>svg {
+.appTitle > svg {
   width: calc(var(--scale) * -40px + 70px);
   height: calc(var(--scale) * -40px + 70px);
 }
@@ -186,27 +192,27 @@ a {
   margin-bottom: 5px;
 }
 
-.visited>ul {
+.visited > ul {
   margin: 2px;
   padding-inline-start: 40px;
 }
 
-.visited>ul>li {
+.visited > ul > li {
   list-style-image: url("./assets/marker.svg");
 }
 
-.visited>ul>li>a {
+.visited > ul > li > a {
   text-decoration: none;
   color: white;
 }
 
-.nonVisited>ul>li>a {
+.nonVisited > ul > li > a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.nonVisited>ul>li>a>span:nth-child(2) {
+.nonVisited > ul > li > a > span:nth-child(2) {
   text-align: end;
   min-width: fit-content;
   color: rgb(255, 255, 255, 0.5);
@@ -234,7 +240,7 @@ a {
   color: rgb(255, 255, 255, 0.7);
 }
 
-.routeTitle>span:nth-child(2) {
+.routeTitle > span:nth-child(2) {
   color: rgb(255, 255, 255, 0.6);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -244,30 +250,71 @@ a {
   user-select: none;
 }
 
-
 .checkmark {
   height: 1em;
   aspect-ratio: 1;
   background-image: url(./assets/checkmark.svg);
 }
 
-#placeInfo img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
+#placeImages img {
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+  /* height: auto; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
   border-radius: 10px;
   background-color: rgb(var(--bgcolor2));
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
 }
 
-.appTitle>span {
+#placeImages {
+  display: grid;
+  gap: 5px;
+  grid-template-areas: "_1";
+}
+
+#placeImages:has(:nth-child(2)) {
+  grid-template-areas: "_1 _2";
+}
+
+#placeImages:has(:nth-child(3)) {
+  grid-template-areas:
+    "_1 _2"
+    "_1 _3";
+}
+
+#placeImages:has(:nth-child(4)) {
+  grid-template-areas:
+    "_1 _3"
+    "_2 _4";
+}
+
+#placeImages > :nth-child(1) {
+  grid-area: _1;
+}
+
+#placeImages > :nth-child(2) {
+  grid-area: _2;
+}
+
+#placeImages > :nth-child(3) {
+  grid-area: _3;
+}
+
+#placeImages:nth-child(4) {
+  grid-area: _4;
+}
+
+.appTitle > span {
   max-height: 1em;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.appTitle>span>span:nth-child(2) {
+.appTitle > span > span:nth-child(2) {
   opacity: calc(var(--scale) * var(--scale));
 }
 
@@ -529,4 +576,15 @@ section,
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
+}
+
+#placeName {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-wrap: balance;
+}
+
+#placeShort {
+  color: rgb(255, 255, 255, 0.7);
+  font-size: 0.9em;
 }

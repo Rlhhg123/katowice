@@ -1,9 +1,8 @@
-export {u}
+export { u, urlMenager_get };
+var places = [];
+var displayPlace = undefined;
 
-var silent = false;
 const u = (url) => {
-  silent = false;
-
   if (url.startsWith("http")) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -17,27 +16,21 @@ const u = (url) => {
       backButton.href = "#mainmenu";
 
       mainmenu.classList.add("hidden");
-      if (url.startsWith("#map:") && false) {
+      if (url.startsWith("#map:")) {
         url = trimPrefix(url, "#map:");
-        place = places[url];
+        const place = places.find((place) => place.id == url);
         if (place) {
-          map.setView(new L.LatLng(place.lat, place.lon), 19);
           displayPlace(url);
         } else {
           tooltips.style.height = "0%";
         }
-      } else {
-        tooltips.style.height = "0%";
       }
     }
   }
 };
 
 window.addEventListener("popstate", function () {
-  if (!silent) {
-    u(window.location.hash);
-  }
-  silent = false;
+  u(window.location.hash);
 });
 
 function trimPrefix(str, prefix) {
@@ -47,3 +40,8 @@ function trimPrefix(str, prefix) {
     return str;
   }
 }
+
+const urlMenager_get = (_places, _displayPlace) => {
+  places = _places;
+  displayPlace = _displayPlace;
+};

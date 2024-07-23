@@ -4,7 +4,7 @@ const routesData = await fetch("./PLACES/routes.json").then((res) =>
   res.json()
 );
 
-function loadRoutes(places) {
+function loadRoutes(places, userPos) {
   const routes = {};
   const badges = [];
   var ele = "";
@@ -24,16 +24,14 @@ function loadRoutes(places) {
     var completed = 0;
     const distances = [];
     route.forEach((key, i) => {
-      const place = places[key];
-
-      // const userPos = userPosMarker.getLatLng();
-      // const markerPos = place.marker.getLatLng();
-      const distance = 0; //userPos.distanceTo(markerPos);
+      const place = places.find((place) => place.id == key);
+      console.log(userPos);
+      const markerPos = { lat: place.lat, lon: place.lon };
+      const distance = userPos.distanceTo(markerPos);
       distances.push({
         id: key,
-        distance: distance, // + (!place?.locked * Infinity || 0),
+        distance: place.unlocked ? Infinity : distance,
       });
-      //                                                                 ^^^^^^^^^^^^^ wft?
     });
 
     distances.sort((a, b) => a.distance - b.distance);
@@ -50,10 +48,10 @@ function loadRoutes(places) {
       }
 
       if (place.unlocked) {
-        thisele += `<li><a href="#map:${e.name}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
+        thisele += `<li><a href="#map:${e.id}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
         completed++;
       } else {
-        thisele += `<li><a href="#map:${e.name}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+        thisele += `<li><a href="#map:${e.id}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
       }
     });
     if (route.length == completed) {
