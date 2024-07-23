@@ -1,18 +1,18 @@
 [
   {
-    "id": 1,
-    "name": "Nikiszowiec",
-    "lat": 50.2437359922774,
-    "lon": 19.08208185760909,
-    "icon": "historic",
-    "routes": ["museum"]
-  },
-  {
     "id": 2,
     "name": "Śląski Ogród Zoologiczny w Katowicach",
     "lat": 50.280767115863185,
     "lon": 18.990875799859605,
     "icon": "park",
     "routes": ["museum", "park"]
+  },
+  {
+    "id": 1,
+    "name": "Nikiszowiec",
+    "lat": 50.2437359922774,
+    "lon": 19.08208185760909,
+    "icon": "historic",
+    "routes": ["museum"]
   }
 ]

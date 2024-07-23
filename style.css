@@ -421,9 +421,9 @@ a {
 
 @media (max-width: 700px) {
   .leaflet-zoom-animated {
-    transition: none !important;
-    -moz-transition: none !important;
-    -webkit-transition: none !important;
+    transition: 0s !important;
+    -moz-transition: 0s !important;
+    -webkit-transition: 0s !important;
   }
 }
 

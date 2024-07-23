@@ -39,16 +39,16 @@ const localisationError = () => {
 const updateUserPos = (position) => {
   locationBox.style.display = "none";
   UserPosition = position;
-  var newLatLng = new L.LatLng(
-    UserPosition.coords.latitude,
-    UserPosition.coords.longitude
-  );
-  userPosMarker.setLatLng(newLatLng);
+  // var newLatLng = new L.LatLng(
+  //   UserPosition?.coords?.latitude,
+  //   UserPosition?.coords?.longitude
+  // );
+  // userPosMarker.setLatLng(newLatLng);
   userPosMarker.setOpacity(1);
   userPosMarker.options.interactive = true;
   checkLocked();
-  updateNonVisited();
   updateVisited();
+  updateNonVisited();
   loadRoutes(places, userPosMarker.getLatLng());
 };
 
@@ -96,7 +96,6 @@ document.ontouchend = (e) => f(e.changedTouches[0].clientY);
 const f = (h) => {
   if (swiping) {
     const height = 1 - h / document.documentElement.scrollHeight - swipingFix;
-    console.log(height);
     if (height > 0.1) {
       tooltips.style.transition = "300ms";
 
@@ -195,11 +194,12 @@ menucontainer.onscroll = (e) => {
     Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1)
   );
 };
+menucontainer.onscroll();
 
 function updateVisited() {
   var ele = "";
   places.forEach((place, i) => {
-    if (!place?.locked) {
+    if (place?.unlocked) {
       ele += `<li><a href="#map:${place.id}">${place.name}</a></li>`;
     }
   });
@@ -209,21 +209,19 @@ function updateVisited() {
 function updateNonVisited() {
   var ele = "";
   const distances = [];
-  Object.keys(places).forEach((key, i) => {
-    const place = places[key];
-    if (place?.locked) {
+  places.forEach((place) => {
+    if (!place?.unlocked) {
       const userPos = userPosMarker.getLatLng();
       const markerPos = place.marker.getLatLng();
       const distance = userPos.distanceTo(markerPos);
-      distances.push({ name: key, distance });
+      distances.push({ id: place.id, distance });
     }
   });
-
   distances.sort((a, b) => a.distance - b.distance);
 
   for (let i = 0; i < Math.min(4, distances.length); i++) {
     const dst = distances[i];
-    const place = places[dst.name];
+    const place = places.find((place) => place.id == dst.id);
     const distance = dst.distance;
     var roundedDistance;
     if (distance > 1000) {
@@ -240,10 +238,10 @@ function updateNonVisited() {
 loadLocked();
 loadRoutes(places, userPosMarker.getLatLng());
 updateVisited();
+updateNonVisited();
 
 function checkLocked() {
-  Object.keys(places).forEach((key, i) => {
-    const place = places[key];
+  places.forEach((place) => {
     if (place?.locked) {
       const userPos = userPosMarker.getLatLng();
       const markerPos = place.marker.getLatLng();
@@ -262,10 +260,8 @@ function checkLocked() {
 function loadLocked() {
   var unlocked = JSON.parse(localStorage.getItem("unlocked")) || [];
   unlocked.forEach((e) => {
-    var place = places[e];
-    if (place) {
-      place.unlocked = true;
-    }
+    var place = places.find((place) => place.id == e);
+    if (place) place.unlocked = true;
   });
 }
 {
@@ -304,7 +300,6 @@ const share = async () => {
     } i inne ciekawe miejsca w katowicach!`,
     url: window.location.href.replace(/[\?#].*$/, "") + "#map:" + currentPlace,
   };
-  console.log(shareData);
   try {
     await navigator.share(shareData);
   } catch (err) {
