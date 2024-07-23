@@ -130,7 +130,7 @@ a {
   width: 100%;
   height: 120px;
   filter: grayscale(100%) blur(1px);
-  background-image: linear-gradient(to top, rgb(var(--bgcolor1)) 10%, transparent 55%), url("./mapBg.png");
+  background-image: linear-gradient(to top, rgb(var(--bgcolor1)) 10%, transparent 55%), url("./assets/mapBg.png");
 }
 
 .appTitle {

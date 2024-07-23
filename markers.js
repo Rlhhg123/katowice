@@ -12,7 +12,7 @@ const markers = {};
 });
 
 var userPosIcon = new L.Icon({
-  iconUrl: "./userPos.svg",
+  iconUrl: "./assets/userPos.svg",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
