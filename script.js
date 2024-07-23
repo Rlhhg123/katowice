@@ -15,7 +15,8 @@ const map = L.map("map", {
 var UserPosition;
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
+  maxZoom: 21,
+  maxNativeZoom: 19,
   minZoom: 11,
   attribution:
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -174,11 +175,14 @@ async function displayPlace(key) {
     ...place.img.map((src) => {
       const img = document.createElement("img");
       img.setAttribute("src", src);
+      img.onclick = () => displayImage(src);
       return img;
     })
   );
   placeShort.innerHTML = place.short;
-  placeInfo.innerHTML = place.discreption;
+  placeInfo.innerHTML = placeDat.unlocked
+    ? place.discreption
+    : "<div style='font-size:0.8em'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
 
   document.title = `${placeDat.name} - Ciekawe Katowice`;
   tooltips.style.height = "90%";
@@ -342,3 +346,13 @@ navigator.permissions
 if (new URLSearchParams(window.location.search).get("unlockAll") == "true") {
   unlockAll();
 }
+
+function displayImage(src) {
+  imagePreview.innerHTML = "";
+  const img = document.createElement("img");
+  img.src = src;
+  imagePreview.append(img);
+}
+imagePreview.onclick = (e) => {
+  if (e.target == imagePreview) imagePreview.innerHTML = "";
+};
