@@ -131,17 +131,26 @@ document.ontouchmove = (e) => {
   }
 };
 
-for (let [key, place] of Object.entries(places)) {
-  const markerPopup = L.popup().setContent(`Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o ${place?.nn || "nim"} ciekawostki!`);
-  const marker = L.marker([place.lat, place.lon], { icon: markers[place.icon] }).bindPopup(markerPopup).addTo(map);
-  places[key].marker = marker;
-  places[key].popup = markerPopup;
-  marker.on("click", function () {
-    silent = true;
-    window.location.hash = `#map:${key}`;
-    displayPlace(key);
-  });
-}
+ (async () => {
+  const res = await fetch("./PLACES/data.json")
+  const places = await res.json()
+
+  // for (let [key, place] of Object.entries(places)) {
+    places.forEach(place => {
+      
+    const markerPopup = L.popup().setContent(`Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o ${place?.nn || "nim"} ciekawostki!`);
+    const marker = L.marker([place.lat, place.lon], { icon: markers["red"] }).bindPopup(markerPopup).addTo(map);
+    // places[key].marker = marker;
+    // places[key].popup = markerPopup;
+    marker.on("click", function () {
+      silent = true;
+      window.location.hash = `#map:${place.id}`;
+      displayPlace(place.id);
+    });
+  })
+})()
+
+
 
 var currentPlace = "";
 
@@ -166,6 +175,7 @@ menucontainer.onscroll = (e) => {
 
 function updateVisited() {
   var ele = "";
+  return;
   Object.keys(places).forEach((key, i) => {
     const place = places[key];
     if (!place?.locked) {
@@ -239,6 +249,7 @@ function loadLocked() {
 }
 
 function loadRoutes() {
+  return 
   var ele = "";
   var badges = [];
   Object.keys(routes).forEach((key, i) => {
