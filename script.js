@@ -1,8 +1,15 @@
+import { markers, userPosIcon } from "./markers.js";
+import { u } from "./urlMenager.js";
+import { loadRoutes } from "./routes.js";
+
+const places = await fetch("./PLACES/data.json").then((res) => res.json());
+
 const map = L.map("map", {
   tap: false,
   zoomDelta: 1,
   zoomSnap: 0,
 }).setView([50.2661678296663, 19.02556763415931], 14);
+
 var UserPosition;
 
 const converter = new showdown.Converter({
@@ -18,10 +25,15 @@ const converter = new showdown.Converter({
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   minZoom: 11,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], { icon: userPosIcon }).setZIndexOffset(9999999).addTo(map);
+const userPosMarker = L.marker([50.2661678296663, 19.02556763415931], {
+  icon: userPosIcon,
+})
+  .setZIndexOffset(9999999)
+  .addTo(map);
 userPosMarker.setOpacity(0);
 userPosMarker.options.interactive = false;
 
@@ -31,20 +43,26 @@ const localisationError = () => {
   userPosMarker.options.interactive = false;
 };
 
-updateUserPos = (position) => {
+const updateUserPos = (position) => {
   locationBox.style.display = "none";
   UserPosition = position;
-  var newLatLng = new L.LatLng(UserPosition.coords.latitude, UserPosition.coords.longitude);
+  var newLatLng = new L.LatLng(
+    UserPosition.coords.latitude,
+    UserPosition.coords.longitude
+  );
   userPosMarker.setLatLng(newLatLng);
   userPosMarker.setOpacity(1);
   userPosMarker.options.interactive = true;
   checkLocked();
   updateNonVisited();
   updateVisited();
-  loadRoutes();
+  loadRoutes(places);
 };
 
-var localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
+var localisationUpdateInterval = navigator.geolocation.watchPosition(
+  updateUserPos,
+  localisationError
+);
 
 navigator.geolocation.getCurrentPosition((position) => {
   map.setView([position.coords.latitude, position.coords.longitude]);
@@ -64,7 +82,8 @@ tooltipsSwipeButton.onmousedown = (e) => {
 };
 
 tooltipsSwipeButton.ontouchstart = (e) => {
-  swipingStart = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
+  swipingStart =
+    1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight;
   swipingFix = swipingStart - parseFloat(tooltips.style.height) * 0.01;
   swiping = true;
 };
@@ -73,7 +92,8 @@ tooltips.ontouchmove = (e) => {
   if (placeData.scrollTop == 0 && !swiping) {
     swiping = true;
     tabswiping = true;
-    swipingStart = e.changedTouches[0].clientY / document.documentElement.scrollHeight;
+    swipingStart =
+      e.changedTouches[0].clientY / document.documentElement.scrollHeight;
     swipingFix = 1 - parseFloat(tooltips.style.height) * 0.01 - swipingStart;
   }
 };
@@ -92,7 +112,6 @@ const f = (h) => {
       } else {
         tooltips.style.height = "10%";
         placeData.scrollTop = 0;
-        silent = true;
 
         window.location.hash = "#map";
       }
@@ -109,7 +128,8 @@ const f = (h) => {
 
 document.onmousemove = (e) => {
   if (swiping) {
-    const height = 1 - e.clientY / document.documentElement.scrollHeight - swipingFix;
+    const height =
+      1 - e.clientY / document.documentElement.scrollHeight - swipingFix;
     tooltips.style.transition = "0ms";
     tooltips.style.height = height * 100 + "%";
     placeData.scrollTop = 0;
@@ -118,7 +138,10 @@ document.onmousemove = (e) => {
 
 document.ontouchmove = (e) => {
   if (swiping) {
-    var height = 1 - e.changedTouches[0].clientY / document.documentElement.scrollHeight - swipingFix;
+    var height =
+      1 -
+      e.changedTouches[0].clientY / document.documentElement.scrollHeight -
+      swipingFix;
     if (tabswiping) {
       if (height > 0.9) {
         height = 0.9;
@@ -131,26 +154,22 @@ document.ontouchmove = (e) => {
   }
 };
 
- (async () => {
-  const res = await fetch("./PLACES/data.json")
-  const places = await res.json()
-
-  // for (let [key, place] of Object.entries(places)) {
-    places.forEach(place => {
-      
-    const markerPopup = L.popup().setContent(`Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o ${place?.nn || "nim"} ciekawostki!`);
-    const marker = L.marker([place.lat, place.lon], { icon: markers["red"] }).bindPopup(markerPopup).addTo(map);
-    // places[key].marker = marker;
-    // places[key].popup = markerPopup;
-    marker.on("click", function () {
-      silent = true;
-      window.location.hash = `#map:${place.id}`;
-      displayPlace(place.id);
-    });
-  })
-})()
-
-
+places.forEach((place) => {
+  const markerPopup = L.popup().setContent(
+    `Odwiedź <b>${place?.name2 || place.name}</b>, aby poznać o ${
+      place?.nn || "nim"
+    } ciekawostki!`
+  );
+  const marker = L.marker([place.lat, place.lon], { icon: markers["red"] })
+    .bindPopup(markerPopup)
+    .addTo(map);
+  // places[key].marker = marker;
+  // places[key].popup = markerPopup;
+  marker.on("click", function () {
+    window.location.hash = `#map:${place.id}`;
+    displayPlace(place.id);
+  });
+});
 
 var currentPlace = "";
 
@@ -161,27 +180,28 @@ async function displayPlace(key) {
   //   places[key].marker.openPopup();
   //   window.location.hash = "#map";
   // } else {
-    const res = await fetch(`./PLACES/${key}.json`)
-    const place = await res.json()
-    // places[key].marker.closePopup();
-    placeInfo.innerHTML = converter.makeHtml(place.discreption);
-    document.title = `${""} - Ciekawe Katowice`;
-    tooltips.style.height = "90%";
-    tooltips.style.transition = "300ms";
+  const res = await fetch(`./PLACES/${key}.json`);
+  const place = await res.json();
+  // places[key].marker.closePopup();
+  placeInfo.innerHTML = converter.makeHtml(place.discreption);
+  document.title = `${""} - Ciekawe Katowice`;
+  tooltips.style.height = "90%";
+  tooltips.style.transition = "300ms";
   // }
 }
 
 menucontainer.onscroll = (e) => {
-  appTitle.style.setProperty("--scale", Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1));
+  appTitle.style.setProperty(
+    "--scale",
+    Math.min(menucontainer.scrollTop / backgroundMapImage.clientHeight, 1)
+  );
 };
 
 function updateVisited() {
   var ele = "";
-  return;
-  Object.keys(places).forEach((key, i) => {
-    const place = places[key];
+  places.forEach((place, i) => {
     if (!place?.locked) {
-      ele += `<li><a href="#map:${key}">${place.name}</a></li>`;
+      ele += `<li><a href="#map:${place.id}">${place.name}</a></li>`;
     }
   });
   visited.innerHTML = ele;
@@ -219,7 +239,7 @@ function updateNonVisited() {
   nonVisited.innerHTML = ele;
 }
 loadLocked();
-loadRoutes();
+loadRoutes(places);
 updateVisited();
 
 function checkLocked() {
@@ -245,76 +265,8 @@ function loadLocked() {
   unlocked.forEach((e) => {
     var place = places[e];
     if (place) {
-      place.locked = false;
+      place.unlocked = true;
     }
-  });
-}
-
-function loadRoutes() {
-  return 
-  var ele = "";
-  var badges = [];
-  Object.keys(routes).forEach((key, i) => {
-    const route = routes[key];
-    var thisele = "";
-    var completed = 0;
-    const distances = [];
-    route.destonations.forEach((key, i) => {
-      const place = places[key];
-
-      const userPos = userPosMarker.getLatLng();
-      const markerPos = place.marker.getLatLng();
-      const distance = userPos.distanceTo(markerPos);
-      distances.push({ name: key, distance: distance + (!place?.locked * Infinity || 0) });
-      //                                                                 ^^^^^^^^^^^^^ wft?
-    });
-
-    distances.sort((a, b) => a.distance - b.distance);
-
-    distances.forEach((e) => {
-      const place = places[e.name];
-      const distance = e.distance;
-      var roundedDistance;
-      if (distance > 1000) {
-        roundedDistance = (distance / 1000).toFixed(1) + " km";
-      } else {
-        roundedDistance = (distance / 20).toFixed(0) * 20 + " m";
-      }
-
-      if (place?.locked) {
-        thisele += `<li><a href="#map:${e.name}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
-      } else {
-        thisele += `<li><a href="#map:${e.name}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
-        completed++;
-      }
-    });
-    if (route.destonations.length == completed) {
-      badges.push(key);
-    }
-
-    ele +=
-      `<div class="route visited nonVisited"><div class="routeMeta"><img src="${key}.svg"><div class="routeTitle"><span>${route.name}</span><span>${completed}/${route.destonations.length}</span></div><span class="routeDiscreption">${route.discreption}</span></div><ul>` +
-      thisele +
-      "</ul></div>";
-  });
-  routesObj.innerHTML = ele;
-  const sel = document.querySelector("#badges .selected")?.src;
-  document.getElementById("badges").innerHTML = "";
-  badges.forEach((e) => {
-    const ele = document.createElement("img");
-    ele.src = e + ".svg";
-    if (sel == ele.src) {
-      ele.classList.add("selected");
-    }
-
-    ele.onclick = (event) => {
-      Array.from(document.getElementById("badges").children).forEach((e) => e.classList.remove("selected"));
-      ele.classList.add("selected");
-
-      badgeInfo.innerHTML = `Odznaka za odwiedzenie wszystkich <b>${routes[e]?.nn || routes[e]?.name}</b>.`;
-    };
-
-    document.getElementById("badges").appendChild(ele);
   });
 }
 
@@ -337,7 +289,7 @@ dev.onclick = (e) => {
     checkLocked();
     updateNonVisited();
     updateVisited();
-    loadRoutes();
+    loadRoutes(places);
   }
 
   setTimeout(() => counter--, 5000);
@@ -346,7 +298,9 @@ dev.onclick = (e) => {
 const share = async () => {
   const shareData = {
     title: places[currentPlace].name,
-    text: `Odwiedź ${places[currentPlace]?.name2 || places[currentPlace].name} i inne ciekawe miejsca w katowicach!`,
+    text: `Odwiedź ${
+      places[currentPlace]?.name2 || places[currentPlace].name
+    } i inne ciekawe miejsca w katowicach!`,
     url: window.location.href.replace(/[\?#].*$/, "") + "#map:" + currentPlace,
   };
   try {
@@ -369,14 +323,21 @@ const shareApp = async () => {
   }
 };
 
-new ResizeObserver((entries) => entries.forEach((entry) => map.invalidateSize())).observe(document.getElementById("map"));
+new ResizeObserver((entries) =>
+  entries.forEach((entry) => map.invalidateSize())
+).observe(document.getElementById("map"));
 
-navigator.permissions.query({ name: "geolocation" }).then((permissionStatus) => {
-  permissionStatus.onchange = () => {
-    navigator.geolocation.clearWatch(localisationUpdateInterval);
-    localisationUpdateInterval = navigator.geolocation.watchPosition(updateUserPos, localisationError);
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then((permissionStatus) => {
+    permissionStatus.onchange = () => {
+      navigator.geolocation.clearWatch(localisationUpdateInterval);
+      localisationUpdateInterval = navigator.geolocation.watchPosition(
+        updateUserPos,
+        localisationError
+      );
+    };
+  });
 
 if (new URLSearchParams(window.location.search).get("unlockAll") == "true") {
   unlockAll();

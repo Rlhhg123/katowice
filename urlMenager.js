@@ -1,3 +1,5 @@
+export {u}
+
 var silent = false;
 const u = (url) => {
   silent = false;
@@ -15,7 +17,7 @@ const u = (url) => {
       backButton.href = "#mainmenu";
 
       mainmenu.classList.add("hidden");
-      if (url.startsWith("#map:")) {
+      if (url.startsWith("#map:") && false) {
         url = trimPrefix(url, "#map:");
         place = places[url];
         if (place) {

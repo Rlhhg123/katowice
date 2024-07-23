@@ -1,0 +1,14 @@
+[
+  {
+    "id": "museum",
+    "name": "Muzea w Katowicach",
+    "nn": "Muzeów w Katowicach",
+    "discreption": "Odkryj Szlaki Muzealne w Katowicach – idealne dla miłośników kultury. Fascynujące zbiory, tajemnicze skarby. Niepowtarzalna podróż dla ciekawych umysłów. Zapraszamy do odkrywania!"
+  },
+  {
+    "id": "park",
+    "name": "Atrakcje turystyczne w Katowicach",
+    "nn": "Atrakcji w Katowicach",
+    "discreption": "Szukasz rozwki albo pięknych widoków? Ten szlak jest dla ciebie!"
+  }
+]
