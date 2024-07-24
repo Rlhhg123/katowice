@@ -178,10 +178,27 @@ async function displayPlace(key) {
       return img;
     })
   );
+  var contact = "";
+  {
+    if (place.website) {
+      contact += `<a href="${place.website}"><i class="bi bi-globe2"></i><span>${place.website}</span></a>`;
+    }
+    if (place.phone) {
+      contact += `<a href="tel:${place.phone}"><i class="bi bi-telephone"></i><span>${place.phone}</span></a>`;
+    }
+    if (place.email) {
+      contact += `<a href="mailto:${place.email}"><i class="bi bi-envelope-at"></i><span>${place.email}</span></a>`;
+    }
+    if (place.address) {
+      contact += `<a href="https://osm.org/directions?to=${placeDat.lat}%2C${placeDat.lon}#map=19/${placeDat.lat}/${placeDat.lon}" target="_blank"><i class="bi bi-geo-alt"></i><span>${place.address}</span></a>`;
+    }
+  }
+  placeContact.innerHTML = contact;
   placeShort.innerHTML = place.short;
+  placeSummary.innerHTML = place.summary;
   placeInfo.innerHTML = placeDat.unlocked
     ? place.discreption
-    : "<div style='font-size:0.8em'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
+    : "<div class='locked'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
 
   document.title = `${placeDat.name} - Ciekawe Katowice`;
   tooltips.style.height = "90%";
