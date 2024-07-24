@@ -154,7 +154,6 @@ document.ontouchmove = (e) => {
 };
 
 places.forEach((place) => {
-  console.log(place.icon);
   const marker = L.marker([place.lat, place.lon], {
     icon: markers[place.icon || "museum"],
   }).addTo(map);
