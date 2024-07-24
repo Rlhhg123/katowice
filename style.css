@@ -634,7 +634,7 @@ section,
   box-sizing: border-box;
   transition: 300ms;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   font-size: 0.9em;
 }
 

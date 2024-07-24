@@ -181,17 +181,18 @@ async function displayPlace(key) {
   var contact = "";
   {
     if (place.website) {
-      contact += `<a href="${place.website}"><i class="bi bi-globe2"></i><span>${place.website}</span></a>`;
+      contact += `<a href="${place.website}" target="_blank"><i class="bi bi-globe2"></i></a>`;
     }
     if (place.phone) {
-      contact += `<a href="tel:${place.phone}"><i class="bi bi-telephone"></i><span>${place.phone}</span></a>`;
+      contact += `<a href="tel:${place.phone}"><i class="bi bi-telephone"></i></a>`;
     }
     if (place.email) {
-      contact += `<a href="mailto:${place.email}"><i class="bi bi-envelope-at"></i><span>${place.email}</span></a>`;
+      contact += `<a href="mailto:${place.email}"><i class="bi bi-envelope-at"></i></a>`;
     }
-    if (place.address) {
-      contact += `<a href="https://osm.org/directions?to=${placeDat.lat}%2C${placeDat.lon}#map=19/${placeDat.lat}/${placeDat.lon}" target="_blank"><i class="bi bi-geo-alt"></i><span>${place.address}</span></a>`;
+    if (place.wikipedia) {
+      contact += `<a href="${place.wikipedia}" target="_blank"><i class="bi bi-wikipedia"></i></a>`;
     }
+    contact += `<a href="https://osm.org/directions?to=${placeDat.lat}%2C${placeDat.lon}#map=19/${placeDat.lat}/${placeDat.lon}" target="_blank"><i class="bi bi-geo-alt"></a>`;
   }
   placeContact.innerHTML = contact;
   placeShort.innerHTML = place.short;
