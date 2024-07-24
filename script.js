@@ -1,6 +1,7 @@
 import { markers, userPosIcon } from "./markers.js";
 import { u, urlMenager_get } from "./urlMenager.js";
 import { loadRoutes } from "./routes.js";
+import { collapse } from "./marker.js";
 
 const places = await fetch("./PLACES/data.json").then((res) => res.json());
 
@@ -385,3 +386,7 @@ function displayImage(src) {
 imagePreview.onclick = (e) => {
   if (e.target == imagePreview) imagePreview.innerHTML = "";
 };
+
+map.on("zoomend", function () {
+  collapse(places, map);
+});

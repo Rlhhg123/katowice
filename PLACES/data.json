@@ -2,6 +2,7 @@
   {
     "lat": 50.2218038,
     "lon": 19.0677859,
+    "weight": 1,
     "id": 0,
     "icon": "attraction",
     "name": "Giszowiec"
@@ -9,6 +10,7 @@
   {
     "lat": 50.2506271,
     "lon": 19.0351586,
+    "weight": 1,
     "id": 1,
     "icon": "monument",
     "name": "Pomnik Żołnierza Polskiego"
@@ -16,6 +18,7 @@
   {
     "lat": 50.2635811,
     "lon": 19.0240203,
+    "weight": 1,
     "id": 2,
     "icon": "monument",
     "name": "Pomnik Powstańców Śląskich"
@@ -23,6 +26,7 @@
   {
     "lat": 50.253551,
     "lon": 19.0236324,
+    "weight": 1,
     "id": 3,
     "icon": "monument",
     "name": "Wojciech Korfanty"
@@ -30,6 +34,7 @@
   {
     "lat": 50.25443,
     "lon": 19.0253373,
+    "weight": 1,
     "id": 4,
     "icon": "monument",
     "name": "Pomnik Józefa Piłsudskiego"
@@ -37,6 +42,7 @@
   {
     "lat": 50.2462704,
     "lon": 19.0077116,
+    "weight": 1,
     "id": 5,
     "icon": "attraction",
     "name": "Wieża spadochronowa"
@@ -44,6 +50,7 @@
   {
     "lat": 50.2442329,
     "lon": 18.9901175,
+    "weight": 1,
     "id": 6,
     "icon": "museum",
     "name": "Śląskie Centrum Wolności i Solidarności"
@@ -51,6 +58,7 @@
   {
     "lat": 50.2439107,
     "lon": 18.9896859,
+    "weight": 1,
     "id": 7,
     "icon": "monument",
     "name": "Pomnik górników KWK Wujek"
@@ -58,6 +66,7 @@
   {
     "lat": 50.258468,
     "lon": 19.0218417,
+    "weight": 2,
     "id": 8,
     "icon": "monument",
     "name": "Święty Jan"
@@ -65,6 +74,7 @@
   {
     "lat": 50.260678,
     "lon": 19.0218644,
+    "weight": 1,
     "id": 9,
     "icon": "monument",
     "name": "Pomnik Harcerzy Września - Obrońców Katowic"
@@ -72,6 +82,7 @@
   {
     "lat": 50.2547222,
     "lon": 19.0183314,
+    "weight": 1,
     "id": 10,
     "icon": "monument",
     "name": "Stanisław Moniuszko"
@@ -79,6 +90,7 @@
   {
     "lat": 50.2544736,
     "lon": 19.0246373,
+    "weight": 1,
     "id": 11,
     "icon": "monument",
     "name": "Obelisk Orłów Śląskich"
@@ -86,6 +98,7 @@
   {
     "lat": 50.252103,
     "lon": 19.0187731,
+    "weight": 1,
     "id": 12,
     "icon": "monument",
     "name": "Jan Paweł II"
@@ -93,6 +106,7 @@
   {
     "lat": 50.2605048,
     "lon": 19.0285617,
+    "weight": 1,
     "id": 13,
     "icon": "attraction",
     "name": "Pomnik Studenta Uniwersytetu Śląskiego"
@@ -100,6 +114,7 @@
   {
     "lat": 50.2632412,
     "lon": 19.0251091,
+    "weight": 1,
     "id": 14,
     "icon": "monument",
     "name": "Jerzy Ziętek"
@@ -107,6 +122,7 @@
   {
     "lat": 50.2441733,
     "lon": 19.0839786,
+    "weight": 1,
     "id": 15,
     "icon": "monument",
     "name": "Pomnik Józefa Wieczorka"
@@ -114,6 +130,7 @@
   {
     "lat": 50.2687315,
     "lon": 19.0209452,
+    "weight": 1,
     "id": 16,
     "icon": "attraction",
     "name": "Rodzina"
@@ -121,6 +138,7 @@
   {
     "lat": 50.2684471,
     "lon": 19.0207961,
+    "weight": 1,
     "id": 17,
     "icon": "monument",
     "name": "Galeria Artystyczna"
@@ -128,6 +146,7 @@
   {
     "lat": 50.2509984,
     "lon": 19.0182947,
+    "weight": 1,
     "id": 18,
     "icon": "museum",
     "name": "Muzeum Archidiecezjalne"
@@ -135,6 +154,7 @@
   {
     "lat": 50.22242,
     "lon": 19.0674933,
+    "weight": 1,
     "id": 19,
     "icon": "museum",
     "name": "Izba Śląska"
@@ -142,6 +162,7 @@
   {
     "lat": 50.2552389,
     "lon": 19.0286178,
+    "weight": 1,
     "id": 20,
     "icon": "museum",
     "name": "Muzeum Historii Katowic"
@@ -149,6 +170,7 @@
   {
     "lat": 50.2650535,
     "lon": 19.0263754,
+    "weight": 1,
     "id": 21,
     "icon": "monument",
     "name": "Pomnik Henryka Sławika i Józsefa Antalla"
@@ -156,6 +178,7 @@
   {
     "lat": 50.2531809,
     "lon": 19.0213501,
+    "weight": 1,
     "id": 22,
     "icon": "monument",
     "name": "Ławeczka Stanisława Ligonia"
@@ -163,6 +186,7 @@
   {
     "lat": 50.2528281,
     "lon": 19.0226279,
+    "weight": 1,
     "id": 23,
     "icon": "museum",
     "name": "Muzeum Historii Komputerów i Informatyki"
@@ -170,6 +194,7 @@
   {
     "lat": 50.2144356,
     "lon": 18.9691042,
+    "weight": 1,
     "id": 24,
     "icon": "museum",
     "name": "Muzeum Najmniejszych Książek Świata Zygmunta Szkocnego"
@@ -177,6 +202,7 @@
   {
     "lat": 50.2407328,
     "lon": 19.0043964,
+    "weight": 1,
     "id": 25,
     "icon": "monument",
     "name": "Pomnik alpinistów"
@@ -184,6 +210,7 @@
   {
     "lat": 50.2620781,
     "lon": 19.0220287,
+    "weight": 1,
     "id": 26,
     "icon": "attraction",
     "name": "Galeria Sztuki Współczesnej BWA"
@@ -191,6 +218,7 @@
   {
     "lat": 50.2565245,
     "lon": 19.0156814,
+    "weight": 1,
     "id": 27,
     "icon": "museum",
     "name": "Muzeum Historii Komputerów i Informatyki"
@@ -198,6 +226,7 @@
   {
     "lat": 50.2738455,
     "lon": 19.0226162,
+    "weight": 1,
     "id": 28,
     "icon": "monument",
     "name": "Aleksander Rak 1899-1978"
@@ -205,6 +234,7 @@
   {
     "lat": 50.23789402777776,
     "lon": 19.030563422222222,
+    "weight": 1,
     "id": 29,
     "icon": "airport",
     "name": "Lotnisko Katowice - Muchowiec"
@@ -212,6 +242,7 @@
   {
     "lat": 50.259840813461544,
     "lon": 19.013207442307692,
+    "weight": 1,
     "id": 30,
     "icon": "park",
     "name": "Plac Wolności"
@@ -219,6 +250,7 @@
   {
     "lat": 50.2218114590909,
     "lon": 19.068102324999998,
+    "weight": 1,
     "id": 31,
     "icon": "park",
     "name": "Park Giszowiecki"
@@ -226,6 +258,7 @@
   {
     "lat": 50.26820249090908,
     "lon": 19.022005027272726,
+    "weight": 1,
     "id": 32,
     "icon": "park",
     "name": "Plac Grunwaldzki"
@@ -233,6 +266,7 @@
   {
     "lat": 50.240164230000005,
     "lon": 19.00353269,
+    "weight": 1,
     "id": 33,
     "icon": "monument",
     "name": "Cmentarz żołnierzy radzieckich"
@@ -240,6 +274,7 @@
   {
     "lat": 50.25607404444444,
     "lon": 19.100842802222225,
+    "weight": 1,
     "id": 34,
     "icon": "historic",
     "name": "Huta Metali Nieżelaznych Szopienice"
@@ -247,6 +282,7 @@
   {
     "lat": 50.256947726315786,
     "lon": 19.029575036842107,
+    "weight": 1,
     "id": 35,
     "icon": "historic",
     "name": "Parafia Niepokalanego Poczęcia Najświętszej Maryi Panny w Katowicach"
@@ -254,6 +290,7 @@
   {
     "lat": 50.260593719999996,
     "lon": 19.09186083,
+    "weight": 1,
     "id": 36,
     "icon": "park",
     "name": "Park Olimpijczyków"
@@ -261,6 +298,7 @@
   {
     "lat": 50.284635618518514,
     "lon": 19.017847155555554,
+    "weight": 1,
     "id": 37,
     "icon": "park",
     "name": "Skwer Walentego Fojkisa"
@@ -268,6 +306,7 @@
   {
     "lat": 50.268974379999996,
     "lon": 18.975542919999995,
+    "weight": 1,
     "id": 38,
     "icon": "park",
     "name": "Park Załęski"
@@ -275,6 +314,7 @@
   {
     "lat": 50.252594,
     "lon": 19.00936035882353,
+    "weight": 1,
     "id": 39,
     "icon": "park",
     "name": "plac ks. kard. Augusta Hlonda"
@@ -282,6 +322,7 @@
   {
     "lat": 50.25448863043478,
     "lon": 19.01171006956522,
+    "weight": 1,
     "id": 40,
     "icon": "attraction",
     "name": "Pałac Młodzieży im. Aleksandra Kamińskiego"
@@ -289,6 +330,7 @@
   {
     "lat": 50.21721835769232,
     "lon": 18.963795207692307,
+    "weight": 1,
     "id": 41,
     "icon": "park",
     "name": "Park Zadole"
@@ -296,6 +338,7 @@
   {
     "lat": 50.25437554999999,
     "lon": 19.014186100000003,
+    "weight": 1,
     "id": 42,
     "icon": "attraction",
     "name": "Drapacz Chmur"
@@ -303,6 +346,7 @@
   {
     "lat": 50.254643592307694,
     "lon": 19.015146199999997,
+    "weight": 1,
     "id": 43,
     "icon": "church",
     "name": "Kościół pw. Świętego Kazimierza Królewicza"
@@ -310,6 +354,7 @@
   {
     "lat": 50.258942694,
     "lon": 19.027053486000007,
+    "weight": 1,
     "id": 44,
     "icon": "church",
     "name": "Kościół Zmartwychwstania Pańskiego w Katowicach"
@@ -317,6 +362,7 @@
   {
     "lat": 50.256008955555565,
     "lon": 19.028105574074075,
+    "weight": 1,
     "id": 45,
     "icon": "attraction",
     "name": "Dom Oświatowy"
@@ -324,6 +370,7 @@
   {
     "lat": 50.22688841807911,
     "lon": 18.962448136158184,
+    "weight": 1,
     "id": 46,
     "icon": "church",
     "name": "Bazylika Świętego Ludwika Króla i Wniebowzięcia Najświętszej Maryi Panny"
@@ -331,6 +378,7 @@
   {
     "lat": 50.218613404347835,
     "lon": 19.059670099999998,
+    "weight": 1,
     "id": 47,
     "icon": "historic",
     "name": "Willa dyrektora kopalni „Giesche”"
@@ -338,6 +386,7 @@
   {
     "lat": 50.218581842105266,
     "lon": 19.064856668421054,
+    "weight": 1,
     "id": 48,
     "icon": "church",
     "name": "Kościół pw. Świętego Stanisława Kostki"
@@ -345,6 +394,7 @@
   {
     "lat": 50.262343085000026,
     "lon": 19.09567563857142,
+    "weight": 1,
     "id": 49,
     "icon": "church",
     "name": "Kościół pw. św. Jadwigi Śląskiej w Katowicach-Szopienicach"
@@ -352,6 +402,7 @@
   {
     "lat": 50.25727858750001,
     "lon": 19.083935269999994,
+    "weight": 1,
     "id": 50,
     "icon": "historic",
     "name": "Pałacyk Prittwitz"
@@ -359,6 +410,7 @@
   {
     "lat": 50.240974233333326,
     "lon": 19.004782486666663,
+    "weight": 1,
     "id": 51,
     "icon": "church",
     "name": "Kościół pw. Świętego Michała Archanioła"
@@ -366,6 +418,7 @@
   {
     "lat": 50.27698924285714,
     "lon": 19.066825771428572,
+    "weight": 1,
     "id": 52,
     "icon": "historic",
     "name": "Ratusz gminy Dąbrówka Mała"
@@ -373,6 +426,7 @@
   {
     "lat": 50.27551510869564,
     "lon": 19.068174137391317,
+    "weight": 1,
     "id": 53,
     "icon": "church",
     "name": "Kościół pw. Świętego Antoniego Padewskiego"
@@ -380,6 +434,7 @@
   {
     "lat": 50.275547825806456,
     "lon": 19.066991451612903,
+    "weight": 1,
     "id": 54,
     "icon": "theatre",
     "name": "Teatr Gry i Ludzie"
@@ -387,6 +442,7 @@
   {
     "lat": 50.263461541176476,
     "lon": 19.08199413529412,
+    "weight": 1,
     "id": 55,
     "icon": "museum",
     "name": "Muzeum Hutnictwa Cynku"
@@ -394,6 +450,7 @@
   {
     "lat": 50.27427197812501,
     "lon": 19.087363546875,
+    "weight": 1,
     "id": 56,
     "icon": "historic",
     "name": "Wieża wodna Borki"
@@ -401,6 +458,7 @@
   {
     "lat": 50.2661104107438,
     "lon": 19.025323342975202,
+    "weight": 1,
     "id": 57,
     "icon": "attraction",
     "name": "Spodek"
@@ -408,6 +466,7 @@
   {
     "lat": 50.26931271916667,
     "lon": 19.038776330000005,
+    "weight": 1,
     "id": 58,
     "icon": "church",
     "name": "Bazylika Świętego Szczepana"
@@ -415,6 +474,7 @@
   {
     "lat": 50.269895200000015,
     "lon": 19.041391255172417,
+    "weight": 1,
     "id": 59,
     "icon": "church",
     "name": "kaplica Najświętszego Serca Pana Jezusa"
@@ -422,6 +482,7 @@
   {
     "lat": 50.27142255454546,
     "lon": 19.021316036363633,
+    "weight": 1,
     "id": 60,
     "icon": "church",
     "name": "Dom Zakonny Misjonarzy Oblatów MN"
@@ -429,6 +490,7 @@
   {
     "lat": 50.28054510975609,
     "lon": 19.013617707317074,
+    "weight": 1,
     "id": 61,
     "icon": "church",
     "name": "Kościół pw. Świętego Józefa Robotnika"
@@ -436,6 +498,7 @@
   {
     "lat": 50.27389954285714,
     "lon": 18.99958427142857,
+    "weight": 1,
     "id": 62,
     "icon": "church",
     "name": "Kapliczka Matki Boskiej"
@@ -443,6 +506,7 @@
   {
     "lat": 50.25936840384616,
     "lon": 18.966199734615387,
+    "weight": 1,
     "id": 63,
     "icon": "church",
     "name": "Kościół pw. Podwyższenia Krzyża i Świętego Herberta"
@@ -450,6 +514,7 @@
   {
     "lat": 50.26890624642857,
     "lon": 18.97822865357143,
+    "weight": 1,
     "id": 64,
     "icon": "historic",
     "name": "Dom pracowniczy kopalni „Kleofas” w Katowicach"
@@ -457,6 +522,7 @@
   {
     "lat": 50.26951545882353,
     "lon": 18.976122711764706,
+    "weight": 1,
     "id": 65,
     "icon": "historic",
     "name": "Budynek Miejskiego Przedszkola nr 39 w Katowicach"
@@ -464,6 +530,7 @@
   {
     "lat": 50.250811256521736,
     "lon": 19.01894390695652,
+    "weight": 1,
     "id": 66,
     "icon": "historic",
     "name": "Kuria Metropolitalna"
@@ -471,6 +538,7 @@
   {
     "lat": 50.251285260000024,
     "lon": 19.01904064470588,
+    "weight": 1,
     "id": 67,
     "icon": "church",
     "name": "Archikatedra pw. Chrystusa Króla w Katowicach"
@@ -478,6 +546,7 @@
   {
     "lat": 50.25315945460122,
     "lon": 19.01025628466257,
+    "weight": 1,
     "id": 68,
     "icon": "church",
     "name": "Kościół pw. Świętych Apostołów Piotra i Pawła w Katowicach"
@@ -485,6 +554,7 @@
   {
     "lat": 50.26375820588235,
     "lon": 19.000450533529417,
+    "weight": 1,
     "id": 69,
     "icon": "church",
     "name": "Kościół świętego Józefa"
@@ -492,6 +562,7 @@
   {
     "lat": 50.27004776309524,
     "lon": 18.996549913095233,
+    "weight": 1,
     "id": 70,
     "icon": "church",
     "name": "Kościół pw. Świętych Męczenników Jana i Pawła"
@@ -499,6 +570,7 @@
   {
     "lat": 50.26171790888889,
     "lon": 19.01782576,
+    "weight": 1,
     "id": 71,
     "icon": "historic",
     "name": "Budynek III Liceum Ogólnokształcącego w Katowicach"
@@ -506,6 +578,7 @@
   {
     "lat": 50.25972732765957,
     "lon": 19.018613195744685,
+    "weight": 1,
     "id": 72,
     "icon": "historic",
     "name": "Kamienica Oswalda Findeisena w Katowicach"
@@ -513,6 +586,7 @@
   {
     "lat": 50.25985294375,
     "lon": 19.017974296875,
+    "weight": 1,
     "id": 73,
     "icon": "historic",
     "name": "Kamienica przy ulicy Stawowej 13 w Katowicach"
@@ -520,6 +594,7 @@
   {
     "lat": 50.260728633333336,
     "lon": 19.020592916666665,
+    "weight": 1,
     "id": 74,
     "icon": "historic",
     "name": "Budynek Łaźni Miejskiej"
@@ -527,6 +602,7 @@
   {
     "lat": 50.25922527600001,
     "lon": 19.02083154,
+    "weight": 1,
     "id": 75,
     "icon": "historic",
     "name": "Kamienica Pod Butem"
@@ -534,6 +610,7 @@
   {
     "lat": 50.26102958383838,
     "lon": 19.007141348484854,
+    "weight": 1,
     "id": 76,
     "icon": "church",
     "name": "Kaplica pw. Świętego Dobrego Łotra"
@@ -541,6 +618,7 @@
   {
     "lat": 50.28501898717949,
     "lon": 18.965874461538462,
+    "weight": 1,
     "id": 77,
     "icon": "church",
     "name": "Kościół Matki Boskiej Piekarskiej"
@@ -548,6 +626,7 @@
   {
     "lat": 50.275537645144375,
     "lon": 18.971624406299203,
+    "weight": 1,
     "id": 78,
     "icon": "church",
     "name": "Kościół Podwyższenia Krzyża Świętego i Matki Bożej Uzdrowienia Chorych"
@@ -555,6 +634,7 @@
   {
     "lat": 50.25712769256757,
     "lon": 19.03028533378379,
+    "weight": 1,
     "id": 79,
     "icon": "church",
     "name": "Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny"
@@ -562,6 +642,7 @@
   {
     "lat": 50.25737772352941,
     "lon": 19.023315300000004,
+    "weight": 1,
     "id": 80,
     "icon": "historic",
     "name": "Stary Dworzec Kolejowy"
@@ -569,6 +650,7 @@
   {
     "lat": 50.24396685,
     "lon": 19.0857038625,
+    "weight": 1,
     "id": 81,
     "icon": "monument",
     "name": "Pomnik Powstańców Śląskich w Nikiszowcu"
@@ -576,6 +658,7 @@
   {
     "lat": 50.25230114918035,
     "lon": 19.03112980819672,
+    "weight": 1,
     "id": 82,
     "icon": "park",
     "name": "Plac Rady Europy"
@@ -583,6 +666,7 @@
   {
     "lat": 50.264401593750016,
     "lon": 19.033674309374994,
+    "weight": 1,
     "id": 83,
     "icon": "museum",
     "name": "Muzeum Śląskie"
@@ -590,6 +674,7 @@
   {
     "lat": 50.26976744166668,
     "lon": 19.03711511666667,
+    "weight": 1,
     "id": 84,
     "icon": "park",
     "name": "Plac Wincentego Wajdy"
@@ -597,6 +682,7 @@
   {
     "lat": 50.24429107000002,
     "lon": 19.00354155125,
+    "weight": 1,
     "id": 85,
     "icon": "park",
     "name": "Park im. Tadeusza Kościuszki"
@@ -604,6 +690,7 @@
   {
     "lat": 50.165923625,
     "lon": 18.9501222,
+    "weight": 1,
     "id": 86,
     "icon": "historic",
     "name": "Most Cygański"
@@ -611,6 +698,7 @@
   {
     "lat": 50.278778224999996,
     "lon": 19.015458575,
+    "weight": 1,
     "id": 87,
     "icon": "historic",
     "name": "Budynek restauracji Carla Geislera w Katowicach"

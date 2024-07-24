@@ -673,3 +673,7 @@ section,
     transform: rotate(360deg);
   }
 }
+
+.leaflet-marker-icon {
+  transition: 300ms opacity !important;
+}
