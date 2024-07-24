@@ -11,14 +11,14 @@
     "lon": 19.0351586,
     "id": 1,
     "icon": "monument",
-    "name": "Pomnik \u017bo\u0142nierza Polskiego"
+    "name": "Pomnik Żołnierza Polskiego"
   },
   {
     "lat": 50.2635811,
     "lon": 19.0240203,
     "id": 2,
     "icon": "monument",
-    "name": "Pomnik Powsta\u0144c\u00f3w \u015al\u0105skich"
+    "name": "Pomnik Powstańców Śląskich"
   },
   {
     "lat": 50.253551,
@@ -32,84 +32,84 @@
     "lon": 19.0253373,
     "id": 4,
     "icon": "monument",
-    "name": "Pomnik J\u00f3zefa Pi\u0142sudskiego"
+    "name": "Pomnik Józefa Piłsudskiego"
   },
   {
     "lat": 50.2462704,
     "lon": 19.0077116,
     "id": 5,
     "icon": "attraction",
-    "name": "Wie\u017ca spadochronowa"
+    "name": "Wieża spadochronowa"
   },
   {
     "lat": 50.2442329,
     "lon": 18.9901175,
     "id": 6,
     "icon": "museum",
-    "name": "\u015al\u0105skie Centrum Wolno\u015bci i Solidarno\u015bci"
+    "name": "Śląskie Centrum Wolności i Solidarności"
   },
   {
     "lat": 50.2439107,
     "lon": 18.9896859,
     "id": 7,
     "icon": "monument",
-    "name": "Pomnik g\u00f3rnik\u00f3w KWK Wujek"
+    "name": "Pomnik górników KWK Wujek"
   },
   {
     "lat": 50.258468,
     "lon": 19.0218417,
     "id": 8,
     "icon": "monument",
-    "name": "\u015awi\u0119ty Jan"
+    "name": "Święty Jan"
   },
   {
     "lat": 50.260678,
     "lon": 19.0218644,
     "id": 9,
     "icon": "monument",
-    "name": "Pomnik Harcerzy Wrze\u015bnia - Obro\u0144c\u00f3w Katowic"
+    "name": "Pomnik Harcerzy Września - Obrońców Katowic"
   },
   {
     "lat": 50.2547222,
     "lon": 19.0183314,
     "id": 10,
     "icon": "monument",
-    "name": "Stanis\u0142aw Moniuszko"
+    "name": "Stanisław Moniuszko"
   },
   {
     "lat": 50.2544736,
     "lon": 19.0246373,
     "id": 11,
     "icon": "monument",
-    "name": "Obelisk Or\u0142\u00f3w \u015al\u0105skich"
+    "name": "Obelisk Orłów Śląskich"
   },
   {
     "lat": 50.252103,
     "lon": 19.0187731,
     "id": 12,
     "icon": "monument",
-    "name": "Jan Pawe\u0142 II"
+    "name": "Jan Paweł II"
   },
   {
     "lat": 50.2605048,
     "lon": 19.0285617,
     "id": 13,
     "icon": "attraction",
-    "name": "Pomnik Studenta Uniwersytetu \u015al\u0105skiego"
+    "name": "Pomnik Studenta Uniwersytetu Śląskiego"
   },
   {
     "lat": 50.2632412,
     "lon": 19.0251091,
     "id": 14,
     "icon": "monument",
-    "name": "Jerzy Zi\u0119tek"
+    "name": "Jerzy Ziętek"
   },
   {
     "lat": 50.2441733,
     "lon": 19.0839786,
     "id": 15,
     "icon": "monument",
-    "name": "Pomnik J\u00f3zefa Wieczorka"
+    "name": "Pomnik Józefa Wieczorka"
   },
   {
     "lat": 50.2687315,
@@ -137,7 +137,7 @@
     "lon": 19.0674933,
     "id": 19,
     "icon": "museum",
-    "name": "Izba \u015al\u0105ska"
+    "name": "Izba Śląska"
   },
   {
     "lat": 50.2552389,
@@ -151,49 +151,49 @@
     "lon": 19.0263754,
     "id": 21,
     "icon": "monument",
-    "name": "Pomnik Henryka S\u0142awika i J\u00f3zsefa Antalla"
+    "name": "Pomnik Henryka Sławika i Józsefa Antalla"
   },
   {
     "lat": 50.2531809,
     "lon": 19.0213501,
     "id": 22,
     "icon": "monument",
-    "name": "\u0141aweczka Stanis\u0142awa Ligonia"
+    "name": "Ławeczka Stanisława Ligonia"
   },
   {
     "lat": 50.2528281,
     "lon": 19.0226279,
     "id": 23,
     "icon": "museum",
-    "name": "Muzeum Historii Komputer\u00f3w i Informatyki"
+    "name": "Muzeum Historii Komputerów i Informatyki"
   },
   {
     "lat": 50.2144356,
     "lon": 18.9691042,
     "id": 24,
     "icon": "museum",
-    "name": "Muzeum Najmniejszych Ksi\u0105\u017cek \u015awiata Zygmunta Szkocnego"
+    "name": "Muzeum Najmniejszych Książek Świata Zygmunta Szkocnego"
   },
   {
     "lat": 50.2407328,
     "lon": 19.0043964,
     "id": 25,
     "icon": "monument",
-    "name": "Pomnik alpinist\u00f3w"
+    "name": "Pomnik alpinistów"
   },
   {
     "lat": 50.2620781,
     "lon": 19.0220287,
     "id": 26,
     "icon": "attraction",
-    "name": "Galeria Sztuki Wsp\u00f3\u0142czesnej BWA"
+    "name": "Galeria Sztuki Współczesnej BWA"
   },
   {
     "lat": 50.2565245,
     "lon": 19.0156814,
     "id": 27,
     "icon": "museum",
-    "name": "Muzeum Historii Komputer\u00f3w i Informatyki"
+    "name": "Muzeum Historii Komputerów i Informatyki"
   },
   {
     "lat": 50.2738455,
@@ -214,7 +214,7 @@
     "lon": 19.013207442307692,
     "id": 30,
     "icon": "park",
-    "name": "Plac Wolno\u015bci"
+    "name": "Plac Wolności"
   },
   {
     "lat": 50.2218114590909,
@@ -235,28 +235,28 @@
     "lon": 19.00353269,
     "id": 33,
     "icon": "monument",
-    "name": "Cmentarz \u017co\u0142nierzy radzieckich"
+    "name": "Cmentarz żołnierzy radzieckich"
   },
   {
     "lat": 50.25607404444444,
     "lon": 19.100842802222225,
     "id": 34,
     "icon": "historic",
-    "name": "Huta Metali Nie\u017celaznych Szopienice"
+    "name": "Huta Metali Nieżelaznych Szopienice"
   },
   {
     "lat": 50.256947726315786,
     "lon": 19.029575036842107,
     "id": 35,
     "icon": "historic",
-    "name": "Parafia Niepokalanego Pocz\u0119cia Naj\u015bwi\u0119tszej Maryi Panny w Katowicach"
+    "name": "Parafia Niepokalanego Poczęcia Najświętszej Maryi Panny w Katowicach"
   },
   {
     "lat": 50.260593719999996,
     "lon": 19.09186083,
     "id": 36,
     "icon": "park",
-    "name": "Park Olimpijczyk\u00f3w"
+    "name": "Park Olimpijczyków"
   },
   {
     "lat": 50.284635618518514,
@@ -270,7 +270,7 @@
     "lon": 18.975542919999995,
     "id": 38,
     "icon": "park",
-    "name": "Park Za\u0142\u0119ski"
+    "name": "Park Załęski"
   },
   {
     "lat": 50.252594,
@@ -284,7 +284,7 @@
     "lon": 19.01171006956522,
     "id": 40,
     "icon": "attraction",
-    "name": "Pa\u0142ac M\u0142odzie\u017cy im. Aleksandra Kami\u0144skiego"
+    "name": "Pałac Młodzieży im. Aleksandra Kamińskiego"
   },
   {
     "lat": 50.21721835769232,
@@ -305,77 +305,77 @@
     "lon": 19.015146199999997,
     "id": 43,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015awi\u0119tego Kazimierza Kr\u00f3lewicza"
+    "name": "Kościół pw. Świętego Kazimierza Królewicza"
   },
   {
     "lat": 50.258942694,
     "lon": 19.027053486000007,
     "id": 44,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 Zmartwychwstania Pa\u0144skiego w Katowicach"
+    "name": "Kościół Zmartwychwstania Pańskiego w Katowicach"
   },
   {
     "lat": 50.256008955555565,
     "lon": 19.028105574074075,
     "id": 45,
     "icon": "attraction",
-    "name": "Dom O\u015bwiatowy"
+    "name": "Dom Oświatowy"
   },
   {
     "lat": 50.22688841807911,
     "lon": 18.962448136158184,
     "id": 46,
     "icon": "church",
-    "name": "Bazylika \u015awi\u0119tego Ludwika Kr\u00f3la i Wniebowzi\u0119cia Naj\u015bwi\u0119tszej Maryi Panny"
+    "name": "Bazylika Świętego Ludwika Króla i Wniebowzięcia Najświętszej Maryi Panny"
   },
   {
     "lat": 50.218613404347835,
     "lon": 19.059670099999998,
     "id": 47,
     "icon": "historic",
-    "name": "Willa dyrektora kopalni \u201eGiesche\u201d"
+    "name": "Willa dyrektora kopalni „Giesche”"
   },
   {
     "lat": 50.218581842105266,
     "lon": 19.064856668421054,
     "id": 48,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015awi\u0119tego Stanis\u0142awa Kostki"
+    "name": "Kościół pw. Świętego Stanisława Kostki"
   },
   {
     "lat": 50.262343085000026,
     "lon": 19.09567563857142,
     "id": 49,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015bw. Jadwigi \u015al\u0105skiej w Katowicach-Szopienicach"
+    "name": "Kościół pw. św. Jadwigi Śląskiej w Katowicach-Szopienicach"
   },
   {
     "lat": 50.25727858750001,
     "lon": 19.083935269999994,
     "id": 50,
     "icon": "historic",
-    "name": "Pa\u0142acyk Prittwitz"
+    "name": "Pałacyk Prittwitz"
   },
   {
     "lat": 50.240974233333326,
     "lon": 19.004782486666663,
     "id": 51,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015awi\u0119tego Micha\u0142a Archanio\u0142a"
+    "name": "Kościół pw. Świętego Michała Archanioła"
   },
   {
     "lat": 50.27698924285714,
     "lon": 19.066825771428572,
     "id": 52,
     "icon": "historic",
-    "name": "Ratusz gminy D\u0105br\u00f3wka Ma\u0142a"
+    "name": "Ratusz gminy Dąbrówka Mała"
   },
   {
     "lat": 50.27551510869564,
     "lon": 19.068174137391317,
     "id": 53,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015awi\u0119tego Antoniego Padewskiego"
+    "name": "Kościół pw. Świętego Antoniego Padewskiego"
   },
   {
     "lat": 50.275547825806456,
@@ -396,7 +396,7 @@
     "lon": 19.087363546875,
     "id": 56,
     "icon": "historic",
-    "name": "Wie\u017ca wodna Borki"
+    "name": "Wieża wodna Borki"
   },
   {
     "lat": 50.2661104107438,
@@ -410,28 +410,28 @@
     "lon": 19.038776330000005,
     "id": 58,
     "icon": "church",
-    "name": "Bazylika \u015awi\u0119tego Szczepana"
+    "name": "Bazylika Świętego Szczepana"
   },
   {
     "lat": 50.269895200000015,
     "lon": 19.041391255172417,
     "id": 59,
     "icon": "church",
-    "name": "kaplica Naj\u015bwi\u0119tszego Serca Pana Jezusa"
+    "name": "kaplica Najświętszego Serca Pana Jezusa"
   },
   {
     "lat": 50.27142255454546,
     "lon": 19.021316036363633,
     "id": 60,
     "icon": "church",
-    "name": "Dom Zakonny Misjonarzy Oblat\u00f3w MN"
+    "name": "Dom Zakonny Misjonarzy Oblatów MN"
   },
   {
     "lat": 50.28054510975609,
     "lon": 19.013617707317074,
     "id": 61,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015awi\u0119tego J\u00f3zefa Robotnika"
+    "name": "Kościół pw. Świętego Józefa Robotnika"
   },
   {
     "lat": 50.27389954285714,
@@ -445,14 +445,14 @@
     "lon": 18.966199734615387,
     "id": 63,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. Podwy\u017cszenia Krzy\u017ca i \u015awi\u0119tego Herberta"
+    "name": "Kościół pw. Podwyższenia Krzyża i Świętego Herberta"
   },
   {
     "lat": 50.26890624642857,
     "lon": 18.97822865357143,
     "id": 64,
     "icon": "historic",
-    "name": "Dom pracowniczy kopalni \u201eKleofas\u201d w Katowicach"
+    "name": "Dom pracowniczy kopalni „Kleofas” w Katowicach"
   },
   {
     "lat": 50.26951545882353,
@@ -473,35 +473,35 @@
     "lon": 19.01904064470588,
     "id": 67,
     "icon": "church",
-    "name": "Archikatedra pw. Chrystusa Kr\u00f3la w Katowicach"
+    "name": "Archikatedra pw. Chrystusa Króla w Katowicach"
   },
   {
     "lat": 50.25315945460122,
     "lon": 19.01025628466257,
     "id": 68,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015awi\u0119tych Aposto\u0142\u00f3w Piotra i Paw\u0142a w Katowicach"
+    "name": "Kościół pw. Świętych Apostołów Piotra i Pawła w Katowicach"
   },
   {
     "lat": 50.26375820588235,
     "lon": 19.000450533529417,
     "id": 69,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 \u015bwi\u0119tego J\u00f3zefa"
+    "name": "Kościół świętego Józefa"
   },
   {
     "lat": 50.27004776309524,
     "lon": 18.996549913095233,
     "id": 70,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. \u015awi\u0119tych M\u0119czennik\u00f3w Jana i Paw\u0142a"
+    "name": "Kościół pw. Świętych Męczenników Jana i Pawła"
   },
   {
     "lat": 50.26171790888889,
     "lon": 19.01782576,
     "id": 71,
     "icon": "historic",
-    "name": "Budynek III Liceum Og\u00f3lnokszta\u0142c\u0105cego w Katowicach"
+    "name": "Budynek III Liceum Ogólnokształcącego w Katowicach"
   },
   {
     "lat": 50.25972732765957,
@@ -522,7 +522,7 @@
     "lon": 19.020592916666665,
     "id": 74,
     "icon": "historic",
-    "name": "Budynek \u0141a\u017ani Miejskiej"
+    "name": "Budynek Łaźni Miejskiej"
   },
   {
     "lat": 50.25922527600001,
@@ -536,28 +536,28 @@
     "lon": 19.007141348484854,
     "id": 76,
     "icon": "church",
-    "name": "Kaplica pw. \u015awi\u0119tego Dobrego \u0141otra"
+    "name": "Kaplica pw. Świętego Dobrego Łotra"
   },
   {
     "lat": 50.28501898717949,
     "lon": 18.965874461538462,
     "id": 77,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 Matki Boskiej Piekarskiej"
+    "name": "Kościół Matki Boskiej Piekarskiej"
   },
   {
     "lat": 50.275537645144375,
     "lon": 18.971624406299203,
     "id": 78,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 Podwy\u017cszenia Krzy\u017ca \u015awi\u0119tego i Matki Bo\u017cej Uzdrowienia Chorych"
+    "name": "Kościół Podwyższenia Krzyża Świętego i Matki Bożej Uzdrowienia Chorych"
   },
   {
     "lat": 50.25712769256757,
     "lon": 19.03028533378379,
     "id": 79,
     "icon": "church",
-    "name": "Ko\u015bci\u00f3\u0142 pw. Niepokalanego Pocz\u0119cia Naj\u015bwi\u0119tszej Maryi Panny"
+    "name": "Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny"
   },
   {
     "lat": 50.25737772352941,
@@ -571,7 +571,7 @@
     "lon": 19.0857038625,
     "id": 81,
     "icon": "monument",
-    "name": "Pomnik Powsta\u0144c\u00f3w \u015al\u0105skich w Nikiszowcu"
+    "name": "Pomnik Powstańców Śląskich w Nikiszowcu"
   },
   {
     "lat": 50.25230114918035,
@@ -585,7 +585,7 @@
     "lon": 19.033674309374994,
     "id": 83,
     "icon": "museum",
-    "name": "Muzeum \u015al\u0105skie"
+    "name": "Muzeum Śląskie"
   },
   {
     "lat": 50.26976744166668,
@@ -599,14 +599,14 @@
     "lon": 19.00354155125,
     "id": 85,
     "icon": "park",
-    "name": "Park im. Tadeusza Ko\u015bciuszki"
+    "name": "Park im. Tadeusza Kościuszki"
   },
   {
     "lat": 50.165923625,
     "lon": 18.9501222,
     "id": 86,
     "icon": "historic",
-    "name": "Most Cyga\u0144ski"
+    "name": "Most Cygański"
   },
   {
     "lat": 50.278778224999996,
