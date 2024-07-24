@@ -14,6 +14,13 @@ const map = L.map("map", {
 
 var UserPosition;
 
+const markerCircle = L.circleMarker([0, 0], {
+  color: "#1d740b",
+  fillColor: "#1d740b",
+  fillOpacity: 0.5,
+  radius: 17,
+}).addTo(map);
+
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 21,
   maxNativeZoom: 19,
@@ -147,8 +154,9 @@ document.ontouchmove = (e) => {
 };
 
 places.forEach((place) => {
+  console.log(place.icon);
   const marker = L.marker([place.lat, place.lon], {
-    icon: markers["red"],
+    icon: markers[place.icon || "museum"],
   }).addTo(map);
   place.marker = marker;
   marker.on("click", function () {
@@ -165,10 +173,23 @@ async function displayPlace(key) {
   currentPlace = key;
   currentPlaceDat = placeDat;
 
+  document.title = `${placeDat.name} - Ciekawe Katowice`;
+  tooltips.style.height = "90%";
+  tooltips.style.transition = "300ms";
+
+  markerCircle.setLatLng([placeDat.lat, placeDat.lon]);
+
+  placeName.innerHTML = placeDat.name;
+  placeContact.innerHTML = "";
+  placeSummary.innerHTML = "";
+  placeImages.innerHTML = "";
+  placeShort.innerHTML = "";
+  placeInfo.innerHTML =
+    "<div class='loading_title'>Ładowawnie...</div><div class='loading_spinner'><i class='bi bi-arrow-clockwise'></i></div>";
+
   const res = await fetch(`./PLACES/${key}.json`);
   const place = await res.json();
 
-  placeName.innerHTML = placeDat.name;
   placeImages.innerHTML = "";
   placeImages.append(
     ...place.img.map((src) => {
@@ -184,10 +205,10 @@ async function displayPlace(key) {
       contact += `<a href="${place.website}" target="_blank"><i class="bi bi-globe2"></i></a>`;
     }
     if (place.phone) {
-      contact += `<a href="tel:${place.phone}"><i class="bi bi-telephone"></i></a>`;
+      contact += `<a href="tel:${place.phone}" target="_blank"><i class="bi bi-telephone"></i></a>`;
     }
     if (place.email) {
-      contact += `<a href="mailto:${place.email}"><i class="bi bi-envelope-at"></i></a>`;
+      contact += `<a href="mailto:${place.email}" target="_blank"><i class="bi bi-envelope-at"></i></a>`;
     }
     if (place.wikipedia) {
       contact += `<a href="${place.wikipedia}" target="_blank"><i class="bi bi-wikipedia"></i></a>`;
@@ -200,10 +221,6 @@ async function displayPlace(key) {
   placeInfo.innerHTML = placeDat.unlocked
     ? place.discreption
     : "<div class='locked'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
-
-  document.title = `${placeDat.name} - Ciekawe Katowice`;
-  tooltips.style.height = "90%";
-  tooltips.style.transition = "300ms";
 }
 
 menucontainer.onscroll = (e) => {

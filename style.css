@@ -637,6 +637,9 @@ section,
   flex-direction: row;
   font-size: 0.9em;
 }
+#placeContact:empty {
+  display: none;
+}
 
 #placeContact i {
   font-size: 1.5em;
@@ -650,4 +653,23 @@ section,
   align-items: center;
   gap: 8px;
   position: relative;
+}
+
+.loading_title {
+  text-align: center;
+}
+
+.loading_spinner {
+  text-align: center;
+  animation: spin 700ms linear infinite;
+  font-size: 3em;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
