@@ -1,4 +1,4 @@
-import { markers, userPosIcon } from "./markers.js";
+import { userPosIcon } from "./markers.js";
 import { u, urlMenager_get } from "./urlMenager.js";
 import { loadRoutes } from "./routes.js";
 import { collapse } from "./marker.js";
@@ -156,7 +156,13 @@ document.ontouchmove = (e) => {
 
 places.forEach((place) => {
   const marker = L.marker([place.lat, place.lon], {
-    icon: markers[place.icon || "museum"],
+    icon: new L.divIcon({
+      className: "place-marker",
+      html: `<img src="./assets/${place.icon}.svg"><span>${place.name}</span>`,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+      popupAnchor: [0, 0],
+    }),
   }).addTo(map);
   place.marker = marker;
   marker.on("click", function () {

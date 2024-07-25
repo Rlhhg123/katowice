@@ -687,3 +687,19 @@ section,
 .leaflet-marker-icon[src="./assets/userPos.svg"] {
   pointer-events: none !important;
 }
+
+.place-marker img {
+  width: 100%;
+}
+
+.place-marker span {
+  position: absolute;
+  white-space: nowrap;
+  left: 24px;
+  color: #000;
+}
+
+.place-marker {
+  display: flex !important;
+  align-items: center;
+}

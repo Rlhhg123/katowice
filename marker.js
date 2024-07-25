@@ -3,6 +3,9 @@ function collapse(places, map, currentPlace) {
     const marker = place.marker;
     place.screen = map.latLngToContainerPoint(marker.getLatLng());
     marker._icon.classList.remove("disabled");
+    if (!place.width) {
+      place.width = marker._icon.childNodes[1].offsetWidth;
+    }
   });
 
   places.forEach((place, i) => {
@@ -13,8 +16,11 @@ function collapse(places, map, currentPlace) {
     for (let index = i + 1; index < places.length; index++) {
       const second = places[index].marker;
       const secondPosition = places[index].screen;
-      const distance = pitagoras(position, secondPosition);
-      if (distance < 800) {
+      const diff = {
+        x: Math.abs(position.x - secondPosition.x),
+        y: Math.abs(position.y - secondPosition.y),
+      };
+      if (diff.x < 25 && diff.y < Math.max(place.width, places[index].width)) {
         if (
           (currentPlace == place.id ? Infinity : place.weight) <
           (currentPlace == places[index].id ? Infinity : places[index].weight)
