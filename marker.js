@@ -2,8 +2,7 @@ function collapse(places, map, currentPlace) {
   places.forEach((place, i) => {
     const marker = place.marker;
     place.screen = map.latLngToContainerPoint(marker.getLatLng());
-    marker.setOpacity(1);
-    marker.options.interactive = true;
+    marker._icon.classList.remove("disabled");
   });
 
   places.forEach((place, i) => {
@@ -20,11 +19,9 @@ function collapse(places, map, currentPlace) {
           (currentPlace == place.id ? Infinity : place.weight) <
           (currentPlace == places[index].id ? Infinity : places[index].weight)
         ) {
-          marker.setOpacity(0);
-          marker.options.interactive = false;
+          marker._icon.classList.add("disabled");
         } else {
-          second.setOpacity(0);
-          second.options.interactive = false;
+          second._icon.classList.add("disabled");
         }
       }
     }

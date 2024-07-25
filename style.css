@@ -677,3 +677,13 @@ section,
 .leaflet-marker-icon {
   transition: 300ms opacity !important;
 }
+.leaflet-marker-icon.disabled {
+  opacity: 0;
+  pointer-events: none !important;
+  cursor: grab !important;
+  animation: fadeOut 300ms forwards;
+}
+
+.leaflet-marker-icon[src="./assets/userPos.svg"] {
+  pointer-events: none !important;
+}
