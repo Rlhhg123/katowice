@@ -53,6 +53,7 @@
     "weight": 1,
     "id": 6,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Śląskie Centrum Wolności i Solidarności"
   },
   {
@@ -149,6 +150,7 @@
     "weight": 1,
     "id": 18,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Muzeum Archidiecezjalne"
   },
   {
@@ -157,6 +159,7 @@
     "weight": 1,
     "id": 19,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Izba Śląska"
   },
   {
@@ -165,6 +168,7 @@
     "weight": 1,
     "id": 20,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Muzeum Historii Katowic"
   },
   {
@@ -189,6 +193,7 @@
     "weight": 1,
     "id": 23,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Muzeum Historii Komputerów i Informatyki"
   },
   {
@@ -197,6 +202,7 @@
     "weight": 1,
     "id": 24,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Muzeum Najmniejszych Książek Świata Zygmunta Szkocnego"
   },
   {
@@ -221,6 +227,7 @@
     "weight": 1,
     "id": 27,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Muzeum Historii Komputerów i Informatyki"
   },
   {
@@ -445,6 +452,7 @@
     "weight": 1,
     "id": 55,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Muzeum Hutnictwa Cynku"
   },
   {
@@ -669,6 +677,7 @@
     "weight": 1,
     "id": 83,
     "icon": "museum",
+    "routes": ["museum"],
     "name": "Muzeum Śląskie"
   },
   {

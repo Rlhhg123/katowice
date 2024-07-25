@@ -25,7 +25,6 @@ function loadRoutes(places, userPos) {
     const distances = [];
     route.forEach((key, i) => {
       const place = places.find((place) => place.id == key);
-      console.log(userPos);
       const markerPos = { lat: place.lat, lon: place.lon };
       const distance = userPos.distanceTo(markerPos);
       distances.push({
@@ -37,7 +36,6 @@ function loadRoutes(places, userPos) {
     distances.sort((a, b) => a.distance - b.distance);
 
     distances.forEach((e) => {
-      console.log(e);
       const place = places.find((obj) => obj.id == e.id);
       const distance = e.distance;
       var roundedDistance;
@@ -48,10 +46,10 @@ function loadRoutes(places, userPos) {
       }
 
       if (place.unlocked) {
-        thisele += `<li><a href="#map:${e.id}"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
+        thisele += `<li><a href="#map:${e.id}&"><span>${place.name}</span><span class="checkmark"></span></a></li>`;
         completed++;
       } else {
-        thisele += `<li><a href="#map:${e.id}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+        thisele += `<li><a href="#map:${e.id}&"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
       }
     });
     if (route.length == completed) {

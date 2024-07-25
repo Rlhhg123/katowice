@@ -167,7 +167,7 @@ places.forEach((place) => {
 var currentPlace = "";
 var currentPlaceDat = "";
 
-async function displayPlace(key) {
+async function displayPlace(key, move) {
   placeData.scrollTop = 0;
   const placeDat = places.find((place) => place.id == key);
   currentPlace = key;
@@ -178,6 +178,7 @@ async function displayPlace(key) {
   tooltips.style.transition = "300ms";
 
   markerCircle.setLatLng([placeDat.lat, placeDat.lon]);
+  if (move) map.setView([placeDat.lat, placeDat.lon], 19);
 
   placeName.innerHTML = placeDat.name;
   placeContact.innerHTML = "";
@@ -235,7 +236,7 @@ function updateVisited() {
   var ele = "";
   places.forEach((place, i) => {
     if (place?.unlocked) {
-      ele += `<li><a href="#map:${place.id}">${place.name}</a></li>`;
+      ele += `<li><a href="#map:${place.id}&">${place.name}</a></li>`;
     }
   });
   visited.innerHTML = ele;
@@ -265,7 +266,7 @@ function updateNonVisited() {
       roundedDistance = (distance / 20).toFixed(0) * 20 + " m";
     }
 
-    ele += `<li><a href="#map:${dst.name}"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
+    ele += `<li><a href="#map:${dst.id}&"><span>${place.name}</span><span>${roundedDistance}</span></a></li>`;
   }
 
   nonVisited.innerHTML = ele;
@@ -388,5 +389,5 @@ imagePreview.onclick = (e) => {
 };
 
 map.on("zoomend", function () {
-  collapse(places, map);
+  collapse(places, map, currentPlace);
 });

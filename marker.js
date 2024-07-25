@@ -1,4 +1,4 @@
-function collapse(places, map) {
+function collapse(places, map, currentPlace) {
   places.forEach((place, i) => {
     const marker = place.marker;
     place.screen = map.latLngToContainerPoint(marker.getLatLng());
@@ -16,7 +16,10 @@ function collapse(places, map) {
       const secondPosition = places[index].screen;
       const distance = pitagoras(position, secondPosition);
       if (distance < 800) {
-        if (place.weight < places[index].weight) {
+        if (
+          (currentPlace == place.id ? Infinity : place.weight) <
+          (currentPlace == places[index].id ? Infinity : places[index].weight)
+        ) {
           marker.setOpacity(0);
           marker.options.interactive = false;
         } else {

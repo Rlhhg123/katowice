@@ -17,10 +17,15 @@ const u = (url) => {
 
       mainmenu.classList.add("hidden");
       if (url.startsWith("#map:")) {
+        var move = false;
+        if (url.endsWith("&")) {
+          url = url.slice(0, -1);
+          move = true;
+        }
         url = trimPrefix(url, "#map:");
         const place = places.find((place) => place.id == url);
         if (place) {
-          displayPlace(url);
+          displayPlace(url, move);
         } else {
           tooltips.style.height = "0%";
         }
