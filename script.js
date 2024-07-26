@@ -21,7 +21,6 @@ const markerCircle = L.circleMarker([0, 0], {
   fillOpacity: 0.5,
   radius: 17,
 }).addTo(map);
-
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 21,
   maxNativeZoom: 19,
@@ -394,6 +393,7 @@ imagePreview.onclick = (e) => {
   if (e.target == imagePreview) imagePreview.innerHTML = "";
 };
 
-map.on("zoomend", function () {
+map.on("zoomend", function (e) {
   collapse(places, map, currentPlace);
 });
+collapse(places, map, currentPlace);
