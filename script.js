@@ -1,4 +1,4 @@
-import { markers, userPosIcon } from "./markers.js";
+import { userPosIcon } from "./markers.js";
 import { u, urlMenager_get } from "./urlMenager.js";
 import { loadRoutes } from "./routes.js";
 import { collapse } from "./marker.js";
@@ -15,13 +15,20 @@ const map = L.map("map", {
 
 var UserPosition;
 
+try {
+  const mappos = JSON.parse(localStorage.getItem("map"));
+  console.log(mappos);
+  map.setView([mappos.lat, mappos.lng], 14, { animate: false });
+} catch (e) {
+  console.error(e);
+}
+
 const markerCircle = L.circleMarker([0, 0], {
   color: "#1d740b",
   fillColor: "#1d740b",
   fillOpacity: 0.5,
   radius: 17,
 }).addTo(map);
-
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 21,
   maxNativeZoom: 19,
@@ -156,7 +163,13 @@ document.ontouchmove = (e) => {
 
 places.forEach((place) => {
   const marker = L.marker([place.lat, place.lon], {
-    icon: markers[place.icon || "museum"],
+    icon: new L.divIcon({
+      className: "place-marker",
+      html: `<img src="./assets/${place.icon}.svg"><span>${place.name}</span>`,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+      popupAnchor: [0, 0],
+    }),
   }).addTo(map);
   place.marker = marker;
   marker.on("click", function () {
@@ -219,8 +232,8 @@ async function displayPlace(key, move) {
   placeContact.innerHTML = contact;
   placeShort.innerHTML = place.short;
   placeSummary.innerHTML = place.summary;
-  placeInfo.innerHTML = placeDat.unlocked
-    ? place.discreption
+  placeInfo.innerHTML = placeDat.unlocked 
+    ? place.discreption + "<br>"
     : "<div class='locked'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
 }
 
@@ -388,6 +401,12 @@ imagePreview.onclick = (e) => {
   if (e.target == imagePreview) imagePreview.innerHTML = "";
 };
 
-map.on("zoomend", function () {
+map.on("zoomend", function (e) {
   collapse(places, map, currentPlace);
+});
+collapse(places, map, currentPlace);
+
+map.on("moveend", function (e) {
+  localStorage.setItem("map", JSON.stringify(map.getCenter()));
+  console.log(localStorage.getItem("map"));
 });
