@@ -2,7 +2,7 @@
   {
     "lat": 50.2218038,
     "lon": 19.0677859,
-    "weight": 1,
+    "weight": 2,
     "id": 0,
     "icon": "attraction",
     "name": "Giszowiec"
@@ -348,7 +348,7 @@
     "weight": 1,
     "id": 42,
     "icon": "attraction",
-    "name": "Drapacz Chmur"
+    "name": "Gmach Urzędu Skarbowego w Katowicach"
   },
   {
     "lat": 50.254643592307694,
