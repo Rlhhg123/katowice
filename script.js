@@ -15,6 +15,14 @@ const map = L.map("map", {
 
 var UserPosition;
 
+try {
+  const mappos = JSON.parse(localStorage.getItem("map"));
+  console.log(mappos);
+  map.setView([mappos.lat, mappos.lng], 14, { animate: false });
+} catch (e) {
+  console.error(e);
+}
+
 const markerCircle = L.circleMarker([0, 0], {
   color: "#1d740b",
   fillColor: "#1d740b",
@@ -224,8 +232,8 @@ async function displayPlace(key, move) {
   placeContact.innerHTML = contact;
   placeShort.innerHTML = place.short;
   placeSummary.innerHTML = place.summary;
-  placeInfo.innerHTML = placeDat.unlocked
-    ? place.discreption
+  placeInfo.innerHTML = placeDat.unlocked 
+    ? place.discreption + "<br>"
     : "<div class='locked'>Odwiedź to miejsce aby dowiedzieć się więcej!</div>";
 }
 
@@ -397,3 +405,8 @@ map.on("zoomend", function (e) {
   collapse(places, map, currentPlace);
 });
 collapse(places, map, currentPlace);
+
+map.on("moveend", function (e) {
+  localStorage.setItem("map", JSON.stringify(map.getCenter()));
+  console.log(localStorage.getItem("map"));
+});
